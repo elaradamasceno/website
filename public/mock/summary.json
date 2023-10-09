@@ -1,0 +1,113 @@
+{
+  "professionalResume": {
+    "title": "## Resumo Profissional",
+    "aboutMe": {
+      "me": "Elara Damasceno Leme, 29 anos - Ribeirão Preto - São Paulo.",
+      "details": "Formada em Design de Games e Análise e Desenvolvimento de Sistemas, atuo como Front-End desde 2018, com experiência em:",
+      "conclusion": "Também possuo experiência com metodologias Ágeis e sou apaixonada por desenvolvimento web."
+    },
+    "skills": [
+      {
+        "name": "React.Js",
+        "link": "https://react.dev/"
+      },
+      {
+        "name": "Next.Js",
+        "link": "https://nextjs.org/"
+      },
+      {
+        "name": "Redux",
+        "link": "https://redux.js.org/"
+      },
+      {
+        "name": "Nuxt.Js",
+        "link": "https://nuxt.com/"
+      },
+      {
+        "name": "TypeScript",
+        "link": "https://www.typescriptlang.org/"
+      },
+      {
+        "name": "JavaScript",
+        "link": "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+      },
+      {
+        "name": "Styled Components",
+        "link": "https://styled-components.com/"
+      },
+      {
+        "name": "Tailwind CSS",
+        "link": "https://tailwindcss.com/"
+      },
+      {
+        "name": "HTML 5",
+        "link": "https://www.w3schools.com/html/"
+      },
+      {
+        "name": "CSS 3",
+        "link": "https://www.w3schools.com/cssref/index.php"
+      },
+      {
+        "name": "Material UI",
+        "link": "https://mui.com/"
+      },
+      {
+        "name": "Node.Js",
+        "link": "https://nodejs.org/en"
+      },
+      {
+        "name": "Express.Js",
+        "link": "https://expressjs.com/pt-br/"
+      }
+    ]
+  },
+  "professionalHistory": {
+    "title": "## Histórico Profissional",
+    "companies": [
+      {
+        "name": "IBM",
+        "function": "FullStack Developer",
+        "workingTime": {
+          "start": "2021-07-08T08:00:00Z",
+          "end": "2021-07-08T08:00:00Z"
+        },
+        "isCurrent": true,
+        "link": "https://www.ibm.com/br-pt",
+        "description": "Atuo como FullStack Developer em um projeto voltado para a área da saúde, também atuei por alguns meses como líder técnica do Front-End. Utilizando as tecnologias: NodeJs, TypeScript, NextJs, Styled Components, GitFlow e Agile Scrum."
+      },
+      {
+        "name": "Lecom Tecnologia",
+        "function": "Front-End Developer",
+        "workingTime": {
+          "start": "2021-02-02T08:00:00Z",
+          "end": "2021-07-02T08:00:00Z"
+        },
+        "isCurrent": false,
+        "link": "https://www.lecom.com.br/",
+        "description": "Atuei no produto principal da empresa BPM como Front-End Sênior utilizando as tecnologias: ReactJs, VueJs, HTML5, CSS3, GitFlow e Agile Scrum."
+      },
+      {
+        "name": "KZAS",
+        "function": "Front-End Developer",
+        "workingTime": {
+          "start": "2019-12-08T08:00:00Z",
+          "end": "2021-02-02T08:00:00Z"
+        },
+        "isCurrent": false,
+        "link": "https://www.linkedin.com/company/kzaskredito/",
+        "description": "Atuei como Front-End e pude desenvolver meus primeiros projetos do zero, onde um foi o site principal da startup e o segundo projeto uma aplicação web auxiliar do site. Utilizando: NuxtJs com foco em SEO, Design System, JavaScript ES6, Tailwind CSS e Git Flow."
+      },
+      {
+        "name": "Lecom Tecnologia",
+        "function": "Front-End Developer",
+        "workingTime": {
+          "start": "2016-03-02T08:00:00Z",
+          "end": "2019-11-02T08:00:00Z"
+        },
+        "isCurrent": false,
+        "link": "https://www.lecom.com.br/",
+        "description": "Comecei atuando como QA (Quality Assurance) onde tive a oportunidade de automatizar alguns testes com Selenium (WebDriver e IDE), depois migrei para Dev. Front-End onde inicei dando algumas manutenções no produto principal e fui evoluindo ajudando a construir novas funcionalidades na aplicação utilizando: React.js, Vue.js, Material Design, CSS3, JavaScript ES6, Git Flow e Scrum."
+      }
+    ]
+  }
+}

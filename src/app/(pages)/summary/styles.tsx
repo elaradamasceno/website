@@ -18,13 +18,6 @@ export const Container = styled.section`
   `}
 `;
 
-
-export const Title = styled.p`
-  ${({ theme }) => css`
-    color: ${theme.colors.golden};
-  `}
-`;
-
 export const WrapperText = styled.div`
   ${({ theme }) => css`
     color: ${theme.colors.white};

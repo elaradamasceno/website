@@ -6,7 +6,7 @@ export enum Summary {
 
 export enum SocialMedia {
   folderTitle = 'Mídias Sociais',
-  fileType = 'json',
+  fileType = 'md',
   page = '/social-media'
 }
 

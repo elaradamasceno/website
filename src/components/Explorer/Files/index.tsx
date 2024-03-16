@@ -1,12 +1,12 @@
-import type { Icon } from 'lucide-react';
+import { useState } from 'react';
 import { Braces, Info } from 'lucide-react';
 
 import { FilesType } from '@/types/files.type';
 
-import * as S from './styles';
 import useActionsPages from '@/hooks/useActionsPages';
-import { useState } from 'react';
 import { PageIcon } from '@/components/Icon/PageIcon';
+
+import * as S from './styles';
 
 export interface FileProps {
   name: string

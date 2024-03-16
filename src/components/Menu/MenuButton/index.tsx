@@ -1,15 +1,16 @@
-import type { Icon } from 'lucide-react';
+import { LucideIcon } from "lucide-react"
 
 import * as S from './styles';
 
 interface MenuButtonProps {
+  icon: LucideIcon
   isActive?: boolean
-  icon: Icon
+  hasFlipped?: boolean
 }
 
-export const MenuButton = ({isActive = false, icon: Icon}: MenuButtonProps) => {
+export const MenuButton = ({icon: Icon, isActive = false, hasFlipped = false}: MenuButtonProps) => {
   return (
-    <S.Container $isActive={isActive}>
+    <S.Container $isActive={isActive} $hasFlipped={hasFlipped}>
       <Icon size={28} strokeWidth={1.2} />
     </S.Container>
   )

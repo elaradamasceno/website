@@ -2,10 +2,11 @@ import { styled, css } from "styled-components";
 
 interface ContainerProps {
   $isActive: boolean
+  $hasFlipped?: boolean
 }
 
 export const Container = styled.button<ContainerProps>`
-  ${({ theme, $isActive }) => css`
+  ${({ theme, $isActive, $hasFlipped }) => css`
     background: transparent;
     border: none;
     padding: ${theme.pxToRem(10)};
@@ -18,6 +19,10 @@ export const Container = styled.button<ContainerProps>`
       svg{
         color: ${theme.colors.ocean200} !important;
       }
+    `}
+
+    ${$hasFlipped && `
+      transform: scaleX(-1);
     `}
 
     &:hover{ 

@@ -1,18 +1,18 @@
 
 import { useState } from 'react';
 import Typography from '@mui/material/Typography';
-
 import { ChevronRight, ChevronDown } from 'lucide-react';
-import type { Icon } from 'lucide-react';
 
 import { FileProps, Files } from '../../Files';
+
+import { LucideIcon } from "lucide-react"
 
 import * as S from './styles';
 
 
 interface ContentFolderProps {
   title: string
-  icon: Icon
+  icon: LucideIcon
   file: FileProps
 }
 

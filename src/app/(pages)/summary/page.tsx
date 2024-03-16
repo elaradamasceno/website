@@ -3,6 +3,8 @@ import { Fragment, useCallback, useEffect, useState } from 'react';
 import { intervalToDuration } from 'date-fns';
 
 import { FileNumbers } from '@/components/FileNumbers';
+import Text from '@/components/Text';
+import Title from '@/components/Title';
 
 import { getDataSummary } from '@/services/summary-api';
 
@@ -53,24 +55,18 @@ export default function SummaryPage() {
       return (
         <>
           <FileNumbers>
-            <S.Title>
-              {professionalResume.title}
-            </S.Title>
+            <Title type='md' description={professionalResume.title} />
           </FileNumbers>
 
           <FileNumbers />
 
           <FileNumbers>
-            <S.Text>
-              {professionalResume.aboutMe.me}
-            </S.Text>
+            <Text type='md' description={professionalResume.aboutMe.me} descriptionType='default'/>
           </FileNumbers>
 
           <FileNumbers>
             <S.WrapperText>
-              <S.Text>
-                {professionalResume.aboutMe.details}
-              </S.Text>
+              <Text type='md' description={professionalResume.aboutMe.details} descriptionType='default'/>
 
               { professionalResume.skills.map((skill, index) => {
                 return (
@@ -90,9 +86,7 @@ export default function SummaryPage() {
           </FileNumbers>
 
           <FileNumbers>
-            <S.Text>
-              {professionalResume.aboutMe.conclusion}
-            </S.Text>
+            <Text type='md' description={professionalResume.aboutMe.conclusion} descriptionType='default'/>
           </FileNumbers>
         </>
       )
@@ -104,9 +98,7 @@ export default function SummaryPage() {
       return (
         <>
           <FileNumbers>
-            <S.Title>
-              { professionalHistory.title }
-            </S.Title>
+            <Title type='md' description={professionalHistory.title} />
           </FileNumbers>
 
           <FileNumbers />
@@ -125,9 +117,7 @@ export default function SummaryPage() {
                   
                   <S.Separator> - </S.Separator>
 
-                  <S.Text $typeText='ocean'>
-                    { company.function }
-                  </S.Text>
+                  <Text type='md' description={company.function} descriptionType='ocean'/>
                 </FileNumbers>
 
                 <FileNumbers>

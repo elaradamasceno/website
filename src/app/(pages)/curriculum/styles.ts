@@ -2,6 +2,16 @@ import { styled, css } from "styled-components";
 
 import Button, { ButtonProps } from '@mui/material/Button';
 
+export const Container = styled.div`
+  ${({theme}) => css`
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    gap: ${theme.pxToRem(8)};
+  `}
+`
+
 export const Content = styled.div`
   ${({ theme }) => css`
     h3{
@@ -13,7 +23,6 @@ export const Content = styled.div`
 
 export const WrapperButton = styled.div`
   ${({theme}) => css`
-    margin-top: ${theme.pxToRem(16)};
     margin-left: ${theme.pxToRem(16)};
   `}
 `
@@ -31,6 +40,11 @@ export const DownloadButton = styled(Button)<ButtonProps>`
 
     svg{
       size: ${theme.pxToRem(8)};
+    }
+
+    &:hover{
+      border: 1px solid ${theme.colors.ocean200};
+      color: ${theme.colors.ocean200};
     }
   `}
 `

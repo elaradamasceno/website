@@ -13,7 +13,7 @@ export enum SocialMedia {
 export enum GitHub {
   folderTitle = 'GitHub',
   fileType = 'json',
-  page = '/summary'
+  page = '/github'
 }
 
 export enum Curriculum {

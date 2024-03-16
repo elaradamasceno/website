@@ -1,11 +1,9 @@
 import React, { useEffect, useMemo } from 'react';
 
-import { LucideIcon } from "lucide-react";
-
-import { SocialMediaType, SocialMediaKey } from "@/types/social-media.type";
+import { SocialMediaType } from "@/types/social-media.type";
+import { FileNumbers } from '../FileNumbers';
 
 import * as S from './styles';
-import { FileNumbers } from '../FileNumbers';
 
 
 export default function SocialMediaLinks() {

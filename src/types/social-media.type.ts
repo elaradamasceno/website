@@ -17,7 +17,7 @@ export const SocialMediaType = {
     icon: Instagram
   },
   facebook: {
-    title: 'FaceBook',
+    title: 'Facebook',
     link: 'https://web.facebook.com/elara.damasceno/?_rdc=1&_rdr',
     icon: Facebook
   }

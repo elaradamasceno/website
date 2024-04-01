@@ -22,7 +22,7 @@ export const Folders = () => {
       <ContentFolder 
         icon={FolderGit2} 
         title={GitHub.folderTitle} 
-        file={{typeFile: GitHub.fileType, redirect: GitHub.page, name: GitHub.fileType}}
+        file={{typeFile: GitHub.fileType, redirect: Curriculum.page, name: GitHub.fileType}}
       />
 
       <ContentFolder 

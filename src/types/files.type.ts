@@ -1,3 +1,3 @@
-export type FilesType = 'md' | 'json' | 'ts' | 'tsx' | 'none' | 'markdown';
+export type FilesType = 'md' | 'txt' | 'code' | 'none';
 
 export type FileIconSizeType = 'small' | 'medium';

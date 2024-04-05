@@ -1,8 +1,9 @@
 'use client'
 import { useMemo } from 'react';
+import { DownloadCloud } from 'lucide-react';
+
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import { DownloadCloud } from 'lucide-react';
 
 import { FileNumbers } from '@/components/FileNumbers';
 import { ResumeDownload } from '@/types/types-languages.type';

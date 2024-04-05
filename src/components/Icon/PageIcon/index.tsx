@@ -1,10 +1,9 @@
-import { Braces, ChevronRight, FileDown, Info } from 'lucide-react';
-
+import { FileDown, FileText, Info } from 'lucide-react';
 
 import { FileIconSizeType, FilesType } from "@/types/files.type";
+import { GeneralText } from '@/enum/general.enum';
 
 import * as S from './styles';
-import { GeneralText } from '@/enum/general.enum';
 
 interface PageIconProps {
   typeFile: FilesType
@@ -18,12 +17,10 @@ export const PageIcon = ({ typeFile, sizeFile, nameFile = '' }: PageIconProps) =
     switch(typeFile){
       case 'md':
         return <Info />
-      case 'json':
-        return <Braces />
-      case 'markdown':
+      case 'txt':
+        return <FileText />
+      case 'code':
         return <FileDown />
-      case 'tsx':
-        return <Info />
       default:
         return <Info />
     }

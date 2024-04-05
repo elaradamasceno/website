@@ -11,10 +11,11 @@ import { Menu } from '../Menu';
 import { CircleMenuButton } from '../Menu/CircleMenuButton';
 import { PageMenu } from '../Menu/PageMenu';
 
+import { usePagesMenu } from '@/context/PagesMenu';
+
 import { GeneralText } from '@/enum/general.enum';
 
 import * as S from './styles';
-import { usePagesMenu } from '@/context/PagesMenu';
 
 interface ComponentLayout {
   children: ReactNode

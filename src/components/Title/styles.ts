@@ -8,7 +8,7 @@ interface ContentProps {
 export const Content = styled.p<ContentProps>`
   ${({ theme, $type }) => css`
     ${$type === 'md' && `
-      color: ${theme.colors.golden};
+      color: ${theme.colors.yellow800};
     `}
   `}
 `

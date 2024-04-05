@@ -85,6 +85,7 @@ export const MainHeader = styled.div`
 export const MainContent = styled.div<MainContentProps>`
   ${({ theme, $showMenu }) => css`
     height: ${theme.pxToRem(600)};
+    border-left: 0.5px solid;
     overflow: auto;
 
     padding: ${theme.pxToRem(4)} ${theme.pxToRem(14)};

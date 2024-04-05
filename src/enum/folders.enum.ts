@@ -12,13 +12,13 @@ export enum SocialMedia {
 
 export enum GitHub {
   folderTitle = 'GitHub',
-  fileType = 'json',
+  fileType = 'txt',
   page = '/github'
 }
 
 export enum Curriculum {
   folderTitle = 'Currículo',
-  fileType = 'markdown',
+  fileType = 'code',
   page = '/curriculum'
 }
 

@@ -3,8 +3,8 @@ import { Fragment, useCallback, useEffect, useState } from 'react';
 import { intervalToDuration } from 'date-fns';
 
 import { FileNumbers } from '@/components/FileNumbers';
-import Text from '@/components/Text';
-import Title from '@/components/Title';
+import { Text } from '@/components/Text';
+import { Title } from '@/components/Title';
 
 import { getDataSummary } from '@/services/summary-api';
 

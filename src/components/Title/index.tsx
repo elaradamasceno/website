@@ -8,10 +8,12 @@ interface TitleProps {
 }
 
 
-export default function Title({ type, description }: TitleProps) {
+function Title({ type, description }: TitleProps) {
   return (
     <S.Content $type={type}>
       { description }
     </S.Content>
   )
 }
+
+export { Title }

@@ -1,6 +1,6 @@
 import { FilesType } from '@/types/files.type';
 
-export type DescriptionType = 'default' | 'refLink' | 'ocean';
+export type DescriptionType = 'default' | 'refLink' | 'ocean' | 'yellow';
 
 import * as S from './styles';
 
@@ -10,10 +10,12 @@ interface TextProps {
   descriptionType: DescriptionType
 }
 
-export default function Text({ description, descriptionType, type}: TextProps) {
+function Text({ description, descriptionType, type}: TextProps) {
   return (
     <S.Content $type={type} $descriptionType={descriptionType}>
       { description }
     </S.Content>
   )
 }
+
+export { Text }

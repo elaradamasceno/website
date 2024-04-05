@@ -26,12 +26,12 @@ export const Icons = styled.div<IconsProps>`
         stroke: ${theme.colors.ocean800};
       `}
 
-      ${$typeFile === 'markdown' && `
+      ${$typeFile === 'code' && `
         fill: ${theme.colors.green};
         stroke: ${theme.colors.black};
       `}
 
-      ${$typeFile === 'json' && `
+      ${$typeFile === 'txt' && `
         stroke: ${theme.colors.yellow800};
       `}
     }

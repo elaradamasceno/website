@@ -1,5 +1,5 @@
 'use client'
-import { ReactNode, useCallback, useEffect, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 import Typography from '@mui/material/Typography';
 
@@ -27,40 +27,34 @@ export const ComponentLayout = ({ children }: ComponentLayout) => {
   const { pagesOpen } = usePagesMenu();
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [showPages, setShowPages] = useState<boolean>(true);
-
-  useEffect(() => {
-    setShowPages(pagesOpen.length === 0 ? false : true)
-  }, [pagesOpen])
+  const [showPages, setShowPages] = useState<boolean>(false);
 
   useEffect(() => {
     setIsMobile(!higherThenSm)
   }, [higherThenSm])
 
-  const RenderMenu = () => {
-    if(!isMobile){
-      return (
-        <>        
-          <S.Aside>
-            <Menu /> 
-          </S.Aside>
+  useEffect(() => {
+    setShowPages(pagesOpen.length === 0 ? false : true)
+  }, [pagesOpen])
 
-          <Explorer />
-        </>
-      )
-    }
+  const handleRenderingExplorerRules = useMemo(() => {
+    if(isMobile && !showPages)
+      return <Explorer />
+    
+    if(!isMobile)
+      return <Explorer />   
+  }, [isMobile, showPages])
 
-    if(isMobile && !showPages){
-      return (
-        <>        
-          <S.Aside>
-            <Menu /> 
-          </S.Aside>
+  const renderMenu = () => {
+    return (
+      <>        
+        <S.Aside>
+          <Menu /> 
+        </S.Aside>
 
-          <Explorer />
-        </>
-      )
-    }
+        { handleRenderingExplorerRules }
+      </>
+    )
   }
 
   return (
@@ -74,10 +68,11 @@ export const ComponentLayout = ({ children }: ComponentLayout) => {
         </S.Header>
 
         <S.Content>
-          {RenderMenu()}
+          {renderMenu()}
 
           <S.Main>
             <PageMenu />
+
             <S.MainContent $showMenu={showPages}>
               { children }
             </S.MainContent>

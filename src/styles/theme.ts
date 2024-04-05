@@ -1,7 +1,7 @@
 const theme = {
   colors: {
-    ocean800: '#13181f',
-    ocean700: '#171d27',
+    ocean800: '#1f2430',
+    ocean700: '#242936',
 
     ocean300: '#669bb0',
     ocean200: '#75d4f9',
@@ -17,9 +17,8 @@ const theme = {
 
     red: '#ed6a5e',
 
-    yellow800: '#818100',
-    yellow500: '#b3b304',
-    yellow: '#f4bf4f',
+    yellow900: '#f4bf4f',
+    yellow800: '#fbcc67',
 
     golden: '#8f6f2a',
     

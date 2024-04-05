@@ -32,13 +32,13 @@ export const Icons = styled.div<IconsProps>`
       `}
 
       ${$typeFile === 'json' && `
-        stroke: ${theme.colors.yellow500};
+        stroke: ${theme.colors.yellow800};
       `}
     }
   `}
 `;
 
-export const Text = styled.p`
+export const Text = styled.span`
   ${({ theme }) => css`
     margin-top: ${theme.pxToRem(8)};
 

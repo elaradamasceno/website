@@ -22,6 +22,11 @@ export const Wrapper = styled.div`
 
     background-color: ${theme.colors.ocean800};
     border-radius: ${theme.pxToRem(8)};
+
+    @media only screen and (max-width: 600px){
+      width: 100%;
+      // height: 100%
+    }
   `}
 `
 
@@ -30,7 +35,7 @@ export const Header = styled.header`
     display: flex;
     gap: ${theme.pxToRem(16)};
     padding: ${theme.pxToRem(10)};
-    border-bottom: 1px solid ${theme.colors.black};
+    border-bottom: 0.5px solid ${theme.colors.black};
   `}
 `
 
@@ -57,6 +62,9 @@ export const Content = styled.div`
 
 export const Aside = styled.aside`
   ${({ theme }) => css`
+    border-right: 0.5px solid;
+    background-color: ${theme.colors.ocean700};
+
     svg {
       color: ${theme.colors.gray500};
     }
@@ -87,7 +95,7 @@ export const MainContent = styled.div<MainContentProps>`
     }
 
     &::-webkit-scrollbar-thumb{
-      background: #2b5e4d66;
+      background: #444b5a9c;
     }
 
     &::-webkit-scrollbar{

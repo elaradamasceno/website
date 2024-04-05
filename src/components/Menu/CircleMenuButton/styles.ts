@@ -32,7 +32,7 @@ export const Content = styled.button<ContentProps>`
     `}
 
     ${$typeColor === 'yellow' && `
-      background-color: ${theme.colors.yellow};
+      background-color: ${theme.colors.yellow900};
     `}
 
     ${$typeColor === 'green' && `

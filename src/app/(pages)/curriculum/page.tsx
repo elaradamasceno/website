@@ -49,8 +49,8 @@ export default function Curriculum() {
   return (
     <S.Container>
       {handleGetAllResume.map(resume => (
-        <>        
-          <FileNumbers key={resume.title}>
+        <div key={resume.title}>        
+          <FileNumbers>
             <S.Content>
               <Typography variant='h3'># Download {resume.title}</Typography>  
             </S.Content>
@@ -65,7 +65,7 @@ export default function Curriculum() {
               </Stack>
             </S.WrapperButton>
           </FileNumbers>
-        </>
+        </div>
       ))}   
     </S.Container>
   )

@@ -1,10 +1,9 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 
 import { SocialMediaType } from "@/types/social-media.type";
 import { FileNumbers } from '../FileNumbers';
 
 import * as S from './styles';
-
 
 export default function SocialMediaLinks() {
   const handleGetAllSocialMedia = useMemo(() => {

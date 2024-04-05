@@ -18,6 +18,10 @@ export default createGlobalStyle`
     align-items: center;
     /* background-image: url("/images/background.jpeg"); */
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(28,79,99,1) 0%, rgba(117,212,249,1) 100%);
+
+    @media only screen and (max-width: 600px){
+      height: 100vh
+    }
   }
 
   a{

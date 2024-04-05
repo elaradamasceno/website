@@ -13,11 +13,11 @@ export const Container = styled.button<ContainerProps>`
 
     ${$isActive && `
       background-color: ${theme.colors.ocean300Opacity};
-      border-left: 2px solid ${theme.colors.ocean200};
+      border-left: 2px solid ${theme.colors.yellow800};
       cursor: pointer;
 
       svg{
-        color: ${theme.colors.ocean200} !important;
+        color: ${theme.colors.yellow800} !important;
       }
     `}
 
@@ -27,7 +27,7 @@ export const Container = styled.button<ContainerProps>`
 
     &:hover{ 
       svg{
-        color: ${theme.colors.ocean200};
+        color: ${theme.colors.yellow800};
       }
     }
   `}

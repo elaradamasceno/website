@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fundo transparente -->
+  <rect width="100" height="100" fill="none"/>
+  
+  <!-- Iniciais "ED" -->
+  <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" fill="#181a234d" font-size="45" font-family="Arial" letter-spacing="-3">ED</text>
+  
+  <!-- Nome "Elara Damasceno" -->
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="#181a234d" font-size="4.5" font-family="Arial">Elara Damasceno</text>
+</svg>

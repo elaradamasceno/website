@@ -85,7 +85,7 @@ export default function HomeComponent() {
           <S.CustomIcons> 
             <ArrowBigUp /> 
             <Command />
-            <S.LetterAsIcon> E </S.LetterAsIcon>
+            <S.LetterAsIcon> T </S.LetterAsIcon>
           </S.CustomIcons>
         </S.WrapperCommands>
       </S.Content>

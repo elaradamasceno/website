@@ -5,7 +5,7 @@ interface FileNumbersProps {
   children?: React.ReactNode
 }
 
-export const FileNumbers = ({ children }: FileNumbersProps) => {
+export default function FileNumbers({ children }: FileNumbersProps){
   return(
     <Wrapper>
       <Numbers />

@@ -1,8 +1,11 @@
-export function EDIcon(){
+import { GeneralText } from '@/enum/general.enum';
+
+import * as S from './styles';
+
+export default function EDIcon(){
   return (
-    <div>
-      <h1>ED</h1>
-      <h6>Elara Damasceno</h6>
-    </div>
+    <S.Container>
+      <h1>{GeneralText.initials}</h1>
+    </S.Container>
   )
 }

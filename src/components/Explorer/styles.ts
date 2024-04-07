@@ -5,7 +5,7 @@ export const Container = styled.div`
     padding: ${theme.pxToRem(12)} 0px;
 
     svg{
-      color: ${theme.colors.gray500};
+      color: ${theme.colors.ocean400};
     }
   `}
 `
@@ -17,7 +17,7 @@ export const Title = styled.div`
     h3{
       font-size: ${theme.pxToRem(12)};
       text-transform: uppercase;
-      color: ${theme.colors.gray500};
+      color: ${theme.colors.ocean400};
       font-weight: 500;
     }
   `}

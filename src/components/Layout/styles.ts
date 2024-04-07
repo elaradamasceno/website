@@ -35,20 +35,58 @@ export const Header = styled.header`
     display: flex;
     gap: ${theme.pxToRem(16)};
     padding: ${theme.pxToRem(10)};
-    border-bottom: 0.5px solid ${theme.colors.black};
+    border-bottom: ${theme.border} ${theme.colors.black};
   `}
 `
 
-export const WrapperHeaderText = styled.div`
+export const WrapperHeader = styled.div`
   ${({ theme }) => css`  
     width: 100%;
     display: flex;
     justify-content: center;
 
+    gap: ${theme.pxToRem(10)};
+  `}
+`
+
+export const WrapperIcons = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: ${theme.pxToRem(4)};
+
+    svg{
+      color: ${theme.colors.ocean400};
+      height: ${theme.pxToRem(16)};
+      width: ${theme.pxToRem(16)};
+
+      &:hover{
+        color: ${theme.colors.gray100};
+        cursor: pointer;
+      }
+    }
+  `}
+`
+
+export const HeaderTextCircle = styled.div`
+  ${({ theme }) => css`
+    border: ${theme.border} ${theme.colors.ocean400};
+    border-radius: ${theme.pxToRem(6)};
+    background-color: ${theme.colors.ocean700};
+
+    width: 50%;
+    padding: ${theme.pxToRem(2)};
+
+    display: flex;
+    justify-content: center;
+    align-item: center;
+
     color: ${theme.colors.gray100};
 
     h6{
-      font-size: ${theme.pxToRem(16)};
+      font-size: ${theme.pxToRem(14)};
     }
   `}
 `
@@ -62,11 +100,11 @@ export const Content = styled.div`
 
 export const Aside = styled.aside`
   ${({ theme }) => css`
-    border-right: 0.5px solid;
+    border-right: ${theme.border};
     background-color: ${theme.colors.ocean700};
 
     svg {
-      color: ${theme.colors.gray500};
+      color: ${theme.colors.ocean400};
     }
   `}
 `
@@ -85,7 +123,7 @@ export const MainHeader = styled.div`
 export const MainContent = styled.div<MainContentProps>`
   ${({ theme, $showMenu }) => css`
     height: ${theme.pxToRem(600)};
-    border-left: 0.5px solid;
+    border-left: ${theme.border};
     overflow: auto;
 
     padding: ${theme.pxToRem(4)} ${theme.pxToRem(14)};

@@ -5,7 +5,7 @@ import { DownloadCloud } from 'lucide-react';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { FileNumbers } from '@/components/FileNumbers';
+import { FileNumbers } from '@/components/core';
 import { ResumeDownload } from '@/types/types-languages.type';
 
 import * as S from './styles';

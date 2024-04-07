@@ -1,15 +1,14 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
+
+import { LucideIcon } from "lucide-react";
 import { ChevronRight, ChevronDown } from 'lucide-react';
 
+import { useFileActions } from '@/context/Files';
 import { FileProps, Files } from '../../Files';
 
-import { LucideIcon } from "lucide-react"
-
 import * as S from './styles';
-
-
 interface ContentFolderProps {
   title: string
   icon: LucideIcon
@@ -17,11 +16,16 @@ interface ContentFolderProps {
 }
 
 export const ContentFolder = ({ title, icon: Icon, file }: ContentFolderProps) => {
-  const [showFiles, setShowFiles] = useState<boolean>(false)
+  const { isToShowFiles } = useFileActions();
+  const [showFiles, setShowFiles] = useState<boolean>(false);
 
   const handleShowFiles = () => {
-    setShowFiles(!showFiles)
+    setShowFiles(!showFiles);
   }
+
+  useEffect(() => {
+    setShowFiles(isToShowFiles);
+  }, [isToShowFiles])
 
   return (
     <S.Container>

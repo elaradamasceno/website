@@ -3,7 +3,7 @@ import { X, Minus, ChevronsUpDown } from 'lucide-react';
 
 import * as S from './styles';
 
-export const CircleMenuButton = () => {
+export default function MenuCircleButton() {
   const [showIcons, setShowIcons] = useState<boolean>(false)
 
   const handleMouseEnter = () => {

@@ -4,7 +4,7 @@ import { Braces, Info } from 'lucide-react';
 import { FilesType } from '@/types/files.type';
 
 import useActionsPages from '@/hooks/useActionsPages';
-import { PageIcon } from '@/components/Icon/PageIcon';
+import { PageIcon } from '@/components/core';
 
 import * as S from './styles';
 

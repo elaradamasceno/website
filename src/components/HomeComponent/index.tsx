@@ -1,9 +1,12 @@
 'use client'
-import { Code } from 'lucide-react';
+import { useEffect } from 'react';
+import { ArrowBigUp, Code, Command } from 'lucide-react';
+
+import { EDIcon, Text } from '@/components/core';
+import { useFileActions } from '@/context/Files';
+
 
 import * as S from './styles';
-import { useEffect } from 'react';
-import { EDIcon } from '../Icon/EDIcon';
 
 /**
  * 
@@ -13,19 +16,20 @@ import { EDIcon } from '../Icon/EDIcon';
  * git --> 
  */
 
-export function HomeComponent() {
+export default function HomeComponent() {
+  const { isToShowFiles, showAllFiles } = useFileActions();
+
   const handleCommandsToOpenFile = (event: KeyboardEvent) => {
-    if (event.metaKey && event.key === 'p') {
-      console.log('Teclas Command + P pressionadas');
-      alert('Teclas Command + P pressionadas')
+    if (event.shiftKey && event.metaKey && event.key === 'p') {
+      showAllFiles({ show: true });
       event.preventDefault();
     }
   }
 
   const handleCommandsToOpenExtensions = (event: KeyboardEvent) => {
-    if (event.metaKey && event.key === '.') {
+    if (event.shiftKey && event.metaKey && event.key === 'e') {
       console.log('Teclas Command + . pressionadas');
-      alert('Teclas Command + . pressionadas')
+      alert('Teclas Command + . pressionadas - exibir extensões')
       event.preventDefault();
     }
   }
@@ -33,7 +37,7 @@ export function HomeComponent() {
   const handleCommandsToOpenColorThemes = (event: KeyboardEvent) => {
     if (event.metaKey && event.key === 'c') {
       console.log('Teclas Command + c pressionadas');
-      alert('Teclas Command + c pressionadas')
+      alert('Teclas Command + c pressionadas - exibir opções de temas ')
       event.preventDefault();
     }
   }
@@ -55,7 +59,35 @@ export function HomeComponent() {
       <EDIcon />
 
       <S.Content>
-        Ver arquivos 
+        <S.WrapperCommands>
+          <S.Typography>Ver todos os arquivos</S.Typography>  
+          
+          <S.CustomIcons> 
+            <ArrowBigUp /> 
+            <Command />
+            <S.LetterAsIcon> P </S.LetterAsIcon>
+          </S.CustomIcons>
+        </S.WrapperCommands>
+
+        <S.WrapperCommands>
+          <S.Typography>Minhas extensões</S.Typography>  
+          
+          <S.CustomIcons> 
+            <ArrowBigUp /> 
+            <Command />
+            <S.LetterAsIcon> E </S.LetterAsIcon>
+          </S.CustomIcons>
+        </S.WrapperCommands>
+
+        <S.WrapperCommands>
+          <S.Typography>Meus temas</S.Typography>  
+          
+          <S.CustomIcons> 
+            <ArrowBigUp /> 
+            <Command />
+            <S.LetterAsIcon> E </S.LetterAsIcon>
+          </S.CustomIcons>
+        </S.WrapperCommands>
       </S.Content>
     </S.Container>
   )

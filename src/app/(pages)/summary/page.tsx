@@ -2,12 +2,8 @@
 import { Fragment, useCallback, useEffect, useState } from 'react';
 import { intervalToDuration } from 'date-fns';
 
-import { FileNumbers } from '@/components/FileNumbers';
-import { Text } from '@/components/Text';
-import { Title } from '@/components/Title';
-
+import { FileNumbers, Text, Title } from '@/components/core';
 import { getDataSummary } from '@/services/summary-api';
-
 import { ProfessionalHistoryType, ProfessionalResumeType } from '@/types/summary-api.type';
 
 import * as S from './styles';

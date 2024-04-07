@@ -1,10 +1,7 @@
 'use client'
 import { format } from "date-fns";
 
-import { FileNumbers } from "../FileNumbers";
-import { Text } from "../Text";
-import { Title } from "../Title";
-
+import { FileNumbers, Text, Title } from "@/components/core";
 import { GetRepositoriesProps } from "@/types/github-services.type";
 
 import * as S from './styles';
@@ -13,7 +10,7 @@ interface GithubRepositoriesProps {
   repositories: GetRepositoriesProps[]
 }
 
-export const GithubRepositories = ({ repositories }: GithubRepositoriesProps) => {
+export default function GithubRepositories({ repositories }: GithubRepositoriesProps){
   const handleDateFormatting = (date: string) => {
     const result = format(new Date(date), 'dd/MM/yyyy')
 

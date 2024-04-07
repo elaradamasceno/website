@@ -1,9 +1,9 @@
 import { Blocks, BugPlay, Files, GitGraph, Monitor, Search } from 'lucide-react';
-import { MenuButton } from './MenuButton';
+import { MenuButton } from '@/components/core';
 
 import * as S from './styles';
 
-export const Menu = () => {
+export default function Menu() {
   return (
     <S.Container>
       <MenuButton isActive={true} icon={Files}/>

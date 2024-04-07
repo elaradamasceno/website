@@ -1,27 +1,23 @@
 'use client'
-import { ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
+
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import Typography from '@mui/material/Typography';
-
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Explorer } from '../Explorer';
-import { Menu } from '../Menu';
-import { CircleMenuButton } from '../Menu/CircleMenuButton';
-import { PageMenu } from '../Menu/PageMenu';
-
+import { Explorer, Menu, MenuCircleButton, MenuPage } from '@/components/core';
 import { usePagesMenu } from '@/context/PagesMenu';
-
 import { GeneralText } from '@/enum/general.enum';
 
 import * as S from './styles';
 
-interface ComponentLayout {
+interface LayoutComponentProps {
   children: ReactNode
 }
 
-export const ComponentLayout = ({ children }: ComponentLayout) => {
+export default function LayoutComponent({ children }: LayoutComponentProps){
   const theme = useTheme();
   const higherThenSm = useMediaQuery(theme.breakpoints.up('sm'));
 
@@ -62,17 +58,25 @@ export const ComponentLayout = ({ children }: ComponentLayout) => {
     <S.Container>
       <S.Wrapper>
         <S.Header>
-          <CircleMenuButton />
-          <S.WrapperHeaderText>
-            <Typography variant='h6'>{GeneralText.title}</Typography>
-          </S.WrapperHeaderText>
+          <MenuCircleButton />
+
+          <S.WrapperHeader>
+            <S.WrapperIcons>
+              <ArrowLeft />
+              <ArrowRight />
+            </S.WrapperIcons>
+
+            <S.HeaderTextCircle>
+              <Typography variant='h6'>{GeneralText.title}</Typography>
+            </S.HeaderTextCircle>
+          </S.WrapperHeader>
         </S.Header>
 
         <S.Content>
           {renderMenu()}
 
           <S.Main>
-            <PageMenu />
+            <MenuPage />
 
             <S.MainContent $showMenu={showPages}>
               { children }

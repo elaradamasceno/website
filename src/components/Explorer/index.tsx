@@ -10,11 +10,11 @@ import { GeneralText } from '@/enum/general.enum';
 
 import * as S from './styles';
 
-export const Explorer = () => {
+export default function Explorer() {
   const [showFiles, setShowFiles] = useState<boolean>(true);
 
   const handleShowFiles = () => {
-    setShowFiles(!showFiles)
+    setShowFiles(!showFiles);
   }
 
   return (

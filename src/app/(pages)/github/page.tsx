@@ -1,4 +1,4 @@
-import { GithubRepositories } from "@/components/GithubRepositories";
+import { GithubRepositories } from "@/components/core";
 import { getRepositories } from "@/services/github-api";
 
 export const revalidate = 3600;

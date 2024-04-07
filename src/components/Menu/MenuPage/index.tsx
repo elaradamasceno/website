@@ -3,17 +3,15 @@ import { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import { X } from 'lucide-react';
 
-import { PageIcon } from '@/components/Icon/PageIcon';
-
+import { PageIcon } from '@/components/core';
 import { usePagesMenu } from '@/context/PagesMenu';
-
 import useActionsPages from '@/hooks/useActionsPages';
 
 import { DataPageType, SaveOpenPageProps } from '@/types/actions-page.type';
 
 import * as S from './styles';
 
-export const PageMenu = () => {
+export default function MenuPage() {
   const { pagesOpen, getOpenPages } = usePagesMenu();
 
   const { onClosePage, onRedirectPage } = useActionsPages();

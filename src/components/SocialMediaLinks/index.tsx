@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 
 import { SocialMediaType } from "@/types/social-media.type";
-import { FileNumbers } from '../FileNumbers';
+import { FileNumbers } from '@/components/core';
 
 import * as S from './styles';
 

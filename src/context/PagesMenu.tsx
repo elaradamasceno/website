@@ -9,22 +9,22 @@ interface PagesMenuProps {
   getOpenPages: () => SaveOpenPageProps[]
   saveOpenPage: (data: SaveOpenPageProps) => void
   updateOpenPage: (nameFile: string) => void
-}
+};
 
 const INITIAL_STATE_PAGES_OPEN: SaveOpenPageProps = {
   typeFile: 'none',
   nameFile: '',
   isActive: false,
   isOpen: false
-}
-
-const PagesMenuContext = createContext<PagesMenuProps>(
-  {} as PagesMenuProps
-)
+};
 
 interface PagesMenuProvider {
   children: ReactNode
-}
+};
+
+const PagesMenuContext = createContext<PagesMenuProps>(
+  {} as PagesMenuProps
+);
 
 const PagesMenuProvider = ({ children }: PagesMenuProvider ) => {
   const [ pagesOpen, setPagesOpen ] = useState<SaveOpenPageProps[]>([INITIAL_STATE_PAGES_OPEN])
@@ -86,7 +86,7 @@ const PagesMenuProvider = ({ children }: PagesMenuProvider ) => {
       </PagesMenuContext.Provider>
     </>
   )
-}
+};
 
 function usePagesMenu(){
   const context = useContext(PagesMenuContext);
@@ -95,6 +95,6 @@ function usePagesMenu(){
     throw new Error('usePagesMenu must be used within an Provider');
 
   return context;
-}
+};
 
-export { PagesMenuProvider, usePagesMenu }
+export { PagesMenuProvider, usePagesMenu };

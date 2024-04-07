@@ -1,6 +1,6 @@
 
 'use client';
-import SocialMediaLinks from '@/components/SocialMediaLinks';
+import { SocialMediaLinks } from '@/components/core';
 import * as S from './styles';
 
 export default function SocialMedia() {

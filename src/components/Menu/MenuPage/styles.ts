@@ -22,15 +22,15 @@ export const Content = styled.div<ActiveProps>`
 
     padding: ${theme.pxToRem(8)};
 
-    border-left: 0.5px solid ${theme.colors.black};
-    border-bottom: 0.5px solid ${theme.colors.black};
+    border-left: ${theme.border} ${theme.colors.black};
+    border-bottom: ${theme.border} ${theme.colors.black};
 
     color: ${theme.colors.gray400};
 
     ${$isActive && `
       background-color: ${theme.colors.ocean700};
-      border-top: 0.5px solid ${theme.colors.yellow800};
-      border-bottom: 0.5px solid ${theme.colors.ocean700};
+      border-top: ${theme.border} ${theme.colors.yellow800};
+      border-bottom: ${theme.border} ${theme.colors.ocean700};
       margin-top: -1px;
 
       color: ${theme.colors.ocean300};

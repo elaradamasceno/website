@@ -2,14 +2,14 @@ const theme = {
   colors: {
     ocean800: '#1f2430',
     ocean700: '#242936',
-
+    ocean400: '#4e5867',
     ocean300: '#669bb0',
     ocean200: '#75d4f9',
     
     ocean800Opacity: '#669bb014',
     ocean300Opacity: '#669bb063',
     
-    gray500: '#4e5867',
+    gray600: '#a3a3a361',
     gray400: '#707070',
     gray100: '#a3a3a3',
 
@@ -28,8 +28,11 @@ const theme = {
     green: '#61c554',
 
     black: '#000000',
+    blackOpacity: '#00000069',
     white: '#FFFFFF',
   },
+
+  border: '0.5px solid',
 
   pxToRem(value: number){
     const transformPxToRem = value / 16;

@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import StyledComponentsRegistry from '@/libs/registry';
 
 import { Providers } from './providers';
-import { ComponentLayout } from '@/components/Layout';
+import { LayoutComponent } from '@/components/core';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,9 +23,9 @@ export default function RootLayout({
       <Providers>
         <body className={inter.className}>
           <StyledComponentsRegistry>
-            <ComponentLayout>
+            <LayoutComponent>
               {children}
-            </ComponentLayout>
+            </LayoutComponent>
           </StyledComponentsRegistry>
         </body>
       </Providers>

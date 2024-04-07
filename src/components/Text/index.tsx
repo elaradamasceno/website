@@ -10,12 +10,10 @@ interface TextProps {
   descriptionType: DescriptionType
 }
 
-function Text({ description, descriptionType, type}: TextProps) {
+export default function Text({ description, descriptionType, type}: TextProps) {
   return (
     <S.Content $type={type} $descriptionType={descriptionType}>
       { description }
     </S.Content>
   )
 }
-
-export { Text }

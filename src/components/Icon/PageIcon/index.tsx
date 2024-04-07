@@ -11,8 +11,7 @@ interface PageIconProps {
   nameFile?: string
 }
 
-export const PageIcon = ({ typeFile, sizeFile, nameFile = '' }: PageIconProps) => {
-
+export default function PageIcon({ typeFile, sizeFile, nameFile = '' }: PageIconProps){
   const handleTypeIcons = () => {
     switch(typeFile){
       case 'md':

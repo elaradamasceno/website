@@ -41,6 +41,4 @@ export const Header = styled.div`
   `}  
 `
 
-export const Content = styled.div`
-  height: 100%;
-`
+export const Content = styled.div``

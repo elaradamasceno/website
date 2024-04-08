@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, createContext, useCallback, useContext, useEffect, useState} from 'react';
+import { ReactNode, createContext, useContext, useState} from 'react';
 
 type ShowAllFilesType = {
   show: boolean

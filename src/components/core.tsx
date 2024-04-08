@@ -1,15 +1,11 @@
 'use client';
-
-import Explorer from "./Explorer";
+import { Explorer } from "./Sections";
 import GithubRepositories from "./GithubRepositories";
 import FileNumbers from "./FileNumbers";
 import HomeComponent from "./HomeComponent";
 import { EDIcon, PageIcon } from "./Icon";
 import LayoutComponent from "./Layout";
-import Menu from "./Menu";
-import MenuButton from "./Menu/MenuButton";
-import MenuCircleButton from "./Menu/MenuCircleButton";
-import MenuPage from "./Menu/MenuPage";
+import { Menu, MenuButton, MenuCircleButton, MenuPage } from "./Menu";
 import SocialMediaLinks from "./SocialMediaLinks";
 import Text from "./Text";
 import Title from "./Title";

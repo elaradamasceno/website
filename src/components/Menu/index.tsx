@@ -1,17 +1,11 @@
-import { Blocks, BugPlay, Files, GitGraph, Monitor, Search } from 'lucide-react';
-import { MenuButton } from '@/components/core';
+import MenuButton from "./MenuButton";
+import MenuCircleButton from "./MenuCircleButton";
+import MenuComponent from "./MenuComponent";
+import MenuPage from "./MenuPage";
 
-import * as S from './styles';
-
-export default function Menu() {
-  return (
-    <S.Container>
-      <MenuButton isActive={true} icon={Files}/>
-      <MenuButton icon={Search} hasFlipped={true} />
-      <MenuButton icon={Blocks}/>
-      <MenuButton icon={BugPlay}/>
-      <MenuButton icon={Monitor}/>
-      <MenuButton icon={GitGraph}/>
-    </S.Container>
-  )
+export {
+  MenuButton,
+  MenuComponent as Menu,
+  MenuCircleButton,
+  MenuPage
 }

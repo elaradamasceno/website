@@ -18,7 +18,6 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   ${({ theme }) => css`  
     width: 80%;
-    /* min-height: 80%; */
 
     background-color: ${theme.colors.ocean800};
     border-radius: ${theme.pxToRem(8)};

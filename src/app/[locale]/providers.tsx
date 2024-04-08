@@ -1,7 +1,7 @@
 'use client'
 import { ThemeProvider } from 'styled-components';
-import theme from '../styles/theme';
-import GlobalStyle from '../styles/global';
+import theme from '../../styles/theme';
+import GlobalStyle from '../../styles/global';
 import { PagesMenuProvider } from '@/context/PagesMenu';
 import { FilesProvider } from '@/context/Files';
 

@@ -4,7 +4,7 @@ import { ArrowBigUp, Code, Command } from 'lucide-react';
 
 import { EDIcon, Text } from '@/components/core';
 import { useFileActions } from '@/context/Files';
-
+import useCustomTranslations from '@/hooks/useCustomTranslations';
 
 import * as S from './styles';
 
@@ -17,6 +17,7 @@ import * as S from './styles';
  */
 
 export default function HomeComponent() {
+  const t = useCustomTranslations('Home');
   const { isToShowFiles, showAllFiles } = useFileActions();
 
   const handleCommandsToOpenFile = (event: KeyboardEvent) => {
@@ -60,7 +61,7 @@ export default function HomeComponent() {
 
       <S.Content>
         <S.WrapperCommands>
-          <S.Typography>Ver todos os arquivos</S.Typography>  
+          <S.Typography>{t('viewAllFiles')}</S.Typography>  
           
           <S.CustomIcons> 
             <ArrowBigUp /> 
@@ -70,7 +71,7 @@ export default function HomeComponent() {
         </S.WrapperCommands>
 
         <S.WrapperCommands>
-          <S.Typography>Minhas extensões</S.Typography>  
+          <S.Typography>{t('myExtensions')}</S.Typography>  
           
           <S.CustomIcons> 
             <ArrowBigUp /> 

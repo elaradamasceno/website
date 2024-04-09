@@ -1,12 +1,15 @@
-import { useRouter } from 'next/navigation';
+import { useRouter } from '../navigation';
 
 import { usePagesMenu } from "@/context/PagesMenu";
 
 import { OnRedirectPageProps } from '@/types/actions-page.type';
 import { Curriculum, GitHub, Home, SocialMedia, Summary } from '@/enum/folders.enum';
+import useCustomTranslations from './useCustomTranslations';
 
 
 const useActionsPages = () => {
+  const t = useCustomTranslations('Folders');
+
   const router = useRouter();
   const { 
     pagesOpen, 
@@ -16,13 +19,13 @@ const useActionsPages = () => {
 
   const handleRedirect = (page: string) => {
     switch(page) {
-      case Summary.folderTitle:
+      case t('summary'):
         return Summary.page
-      case SocialMedia.folderTitle:
+      case t('socialNetworks'):
         return SocialMedia.page
-      case GitHub.folderTitle:
+      case t('gitHub'):
         return GitHub.page
-      case Curriculum.folderTitle:
+      case t('resume'):
         return Curriculum.page
       case Home.folderTitle:
         return Home.page
@@ -55,7 +58,10 @@ const useActionsPages = () => {
   }
 
   const onRedirectPage = ({ typeAction, dataPage}: OnRedirectPageProps) => {
-    const pageRedirect = handleRedirect(dataPage.name)
+    console.log('dataPage.name ', dataPage.name)
+    const pageRedirect = handleRedirect(dataPage.name);
+
+    console.log('pageRedirect ', pageRedirect)
     router.push(pageRedirect);
 
     if(typeAction === 'save'){

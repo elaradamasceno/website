@@ -1,10 +1,10 @@
 {
   "professionalResume": {
-    "title": "## Resumo Profissional",
+    "title": "## Professional Summary",
     "aboutMe": {
       "me": "Elara Damasceno Leme - Ribeirão Preto - São Paulo.",
-      "details": "Formada em Design de Games e Análise e Desenvolvimento de Sistemas, tenho atuado na área de Front-End desde 2018. Além de ter desempenhado o papel de líder técnica em projetos Front-End, desde 2022 tenho atuado como FullStack, ampliando minha experiência. Possuo habilidades em:",
-      "conclusion": "Também possuo experiência com metodologias Ágeis e sou apaixonada por desenvolvimento web."
+      "details": "Graduated in Game Design and Analysis and Systems Development, I have been working in the Front-End area since 2018. In addition to having served as a technical leader in Front-End projects, since 2022 I have been working as a FullStack, expanding my experience. I have skills in:",
+      "conclusion": "I also have experience with Agile methodologies and I'm passionate about web development."
     },
     "skills": [
       {
@@ -62,7 +62,7 @@
     ]
   },
   "professionalHistory": {
-    "title": "## Histórico Profissional",
+    "title": "## Professional Background",
     "companies": [
       {
         "name": "IBM",
@@ -73,10 +73,10 @@
         },
         "isCurrent": true,
         "link": "https://www.ibm.com/br-pt",
-        "description": "Na IBM, trabalho como Full Stack Developer na equipe de consultoria, onde utilizo uma variedade de tecnologias para desenvolvimento, incluindo React.js, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS e Sass no front-end, e Node.js, Express, Fastify e MongoDB no back-end. Além disso, também utilizo Git Flow e metodologias ágeis."
+        "description": "At IBM, I work as a Full Stack Developer on the consulting team, where I utilize a variety of technologies for development, including React.js, Next.js, JavaScript, TypeScript, HTML, CSS, Tailwind CSS, and Sass on the front-end, and Node.js, Express, Fastify, and MongoDB on the back-end. Additionally, I also employ Git Flow and agile methodologies."
       },
       {
-        "name": "Lecom Tecnologia",
+        "name": "Lecom Technology",
         "function": "Front-End Developer",
         "workingTime": {
           "start": "2021-02-02T08:00:00Z",
@@ -84,7 +84,7 @@
         },
         "isCurrent": false,
         "link": "https://www.lecom.com.br/",
-        "description": "Atuei como Front-End Sênior no produto principal da empresa BPM, utilizando tecnologias como React.js, Vue.js, HTML5, CSS3, GitFlow e Agile Scrum."
+        "description": "I worked as a Senior Front-End on the main product of BPM company, using technologies such as React.js, Vue.js, HTML5, CSS3, GitFlow, and Agile Scrum."
       },
       {
         "name": "KZAS",
@@ -95,10 +95,10 @@
         },
         "isCurrent": false,
         "link": "https://www.linkedin.com/company/kzaskredito/",
-        "description": "Como Front-End Pleno na Kzas, tive a oportunidade de desenvolver projetos do zero, incluindo o site principal da startup e uma aplicação web complementar. Utilizei tecnologias como Nuxt.js, priorizando SEO, implementação de Design System, JavaScript ES6, Tailwind CSS e Git Flow."
+        "description": "As a Mid-Level Front-End at Kzas, I had the opportunity to develop projects from scratch, including the startup's main website and a complementary web application. I used technologies such as Nuxt.js, prioritizing SEO, implementing a Design System, JavaScript ES6, Tailwind CSS, and Git Flow."
       },
       {
-        "name": "Lecom Tecnologia",
+        "name": "Lecom Technology",
         "function": "Front-End Developer",
         "workingTime": {
           "start": "2016-03-02T08:00:00Z",
@@ -106,7 +106,7 @@
         },
         "isCurrent": false,
         "link": "https://www.lecom.com.br/",
-        "description": "Comecei minha jornada profissional atuando como QA (Quality Assurance), onde automatizei testes utilizando Selenium (WebDriver e IDE). Posteriormente, fiz a transição para o desenvolvimento Front-End, começando com manutenções no produto principal e progredindo para a construção de novas funcionalidades. Utilizei tecnologias como React.js, Vue.js, Material Design, CSS3, JavaScript ES6 e segui metodologias ágeis como Git Flow e Scrum."
+        "description": "I began my professional journey working as a QA (Quality Assurance), where I automated tests using Selenium (WebDriver and IDE). Later, I transitioned to Front-End development, starting with maintenance on the main product and progressing to the creation of new features. I used technologies such as React.js, Vue.js, Material Design, CSS3, JavaScript ES6, and followed agile methodologies like Git Flow and Scrum."
       }
     ]
   }

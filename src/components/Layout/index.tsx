@@ -38,6 +38,10 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
     setShowPages(pagesOpen.length === 0 ? false : true)
   }, [pagesOpen])
 
+  useEffect(() => {
+    localStorage.setItem('@locale', locale)
+  }, [locale])
+
   const handleRenderingExplorerRules = useMemo(() => {
     if(isMobile && !showPages)
       return <Explorer />

@@ -2,6 +2,7 @@
 import { format } from "date-fns";
 
 import { FileNumbers, Text, Title } from "@/components/core";
+import useCustomTranslations from "@/hooks/useCustomTranslations";
 import { GetRepositoriesProps } from "@/types/github-services.type";
 
 import * as S from './styles';
@@ -11,6 +12,8 @@ interface GithubRepositoriesProps {
 }
 
 export default function GithubRepositories({ repositories }: GithubRepositoriesProps){
+  const t = useCustomTranslations('GithubPage');
+
   const handleDateFormatting = (date: string) => {
     const result = format(new Date(date), 'dd/MM/yyyy')
 
@@ -20,11 +23,11 @@ export default function GithubRepositories({ repositories }: GithubRepositoriesP
   return (
     <>
       <FileNumbers>
-        <Title type="md" description="Meus Projetos" />
+        <Title type="md" description={t('title')} />
       </FileNumbers>
 
       <FileNumbers>
-        <Text type="md" description="Abaixo estão meus projetos de estudo 📘 " descriptionType="default" />
+        <Text type="md" description={`${t('description')} 📘`} descriptionType="default" />
       </FileNumbers>
       
       { repositories.map((repo, index) => {
@@ -32,19 +35,27 @@ export default function GithubRepositories({ repositories }: GithubRepositoriesP
           return (
             <S.Container key={index}>          
               <FileNumbers>
-                <Text type="md" description={ repo.name ?? repo.full_name} descriptionType="ocean" />
+                <Text 
+                  type="md" 
+                  description={ repo.name ?? repo.full_name} 
+                  descriptionType="ocean" 
+                />
               </FileNumbers>
   
               <FileNumbers>
-                <Text type="md" description={ repo.description ? `Descrição: ${repo.description}` : 'Descrição: Projeto de estudo' } descriptionType="default" />
+                <Text 
+                  type="md" 
+                  description={ repo.description ? `${t('projectDescription')}: ${repo.description}` : `${t('projectDescription')}: ${t('studyProject')}` } 
+                  descriptionType="default" 
+                />
               </FileNumbers>
   
               <FileNumbers>
-                <Text type="md" description={ `Data de criação: ${handleDateFormatting(repo.created_at)}` } descriptionType="default"/>
+                <Text type="md" description={ `${t('projectCreationDate')}: ${handleDateFormatting(repo.created_at)}` } descriptionType="default"/>
               </FileNumbers>
   
               <FileNumbers>
-                <Text type="md" description={ `Data de atualização: ${handleDateFormatting(repo.updated_at)}` } descriptionType="default"/>
+                <Text type="md" description={ `${t('projectUpdateDate')}: ${handleDateFormatting(repo.updated_at)}` } descriptionType="default"/>
               </FileNumbers>
   
               <FileNumbers>

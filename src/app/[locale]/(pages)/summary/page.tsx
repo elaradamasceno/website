@@ -3,8 +3,9 @@ import { Fragment, useCallback, useEffect, useState } from 'react';
 import { intervalToDuration } from 'date-fns';
 
 import { FileNumbers, Text, Title } from '@/components/core';
-import { getDataSummary } from '@/services/summary-api';
+import useCustomTranslations from '@/hooks/useCustomTranslations';
 import { ProfessionalHistoryType, ProfessionalResumeType } from '@/types/summary-api.type';
+import { getDataSummary } from '@/services/summary-api';
 
 import * as S from './styles';
 
@@ -15,6 +16,8 @@ interface HandleDatesProps {
 }
 
 export default function SummaryPage() {
+  const t = useCustomTranslations('General');
+
   const [professionalResume, setProfessionalResume] = useState<ProfessionalResumeType>()
   const [professionalHistory, setProfessionalHistory] = useState<ProfessionalHistoryType>()
 
@@ -36,10 +39,10 @@ export default function SummaryPage() {
     });
 
     const verifyYears = getIntervals.years !== 0 ? getIntervals.years : '';
-    const years = verifyYears !== '' ? `${verifyYears} ${verifyYears === 1 ? 'ano e' : 'anos e'}` : '';
+    const years = verifyYears !== '' ? `${verifyYears} ${verifyYears === 1 ? `${t('year')} ${t('and')}` : `${t('years')} ${t('and')}` }` : '';
 
     const verifyMonths = getIntervals.months !== 0 ? getIntervals.months : '';
-    const months = verifyMonths !== '' ? `${verifyMonths} ${verifyMonths === 1 ? 'mês' :  'meses'}` : '';
+    const months = verifyMonths !== '' ? `${verifyMonths} ${verifyMonths === 1 ? `${t('month')}` : `${t('months')}` }` : '';
 
     const date = `${years} ${months}`;
 

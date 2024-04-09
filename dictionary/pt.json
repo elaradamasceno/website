@@ -14,5 +14,20 @@
     "explorer": "Explorar",
     "extensions": "Extensões",
     "colorThemes": "Temas de cores"
+  },
+  "General": {
+    "month": "mês",
+    "months": "meses",
+    "year": "ano",
+    "years": "anos",
+    "and": "e"
+  },
+  "GithubPage": {
+    "title": "Meus Projetos",
+    "description": "Abaixo estão meus projetos de estudo",
+    "projectDescription": "Descrição",
+    "projectCreationDate": "Data de criação",
+    "projectUpdateDate": "Data de atualização",
+    "studyProject": "Projeto de estudo"
   }
 }

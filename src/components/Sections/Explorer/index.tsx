@@ -5,12 +5,13 @@ import Typography from '@mui/material/Typography';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 import { Folders } from './Folders';
-
 import { GeneralText } from '@/enum/general.enum';
+import useCustomTranslations from '@/hooks/useCustomTranslations';
 
 import * as S from './styles';
 
 export default function Explorer() {
+  const t = useCustomTranslations('Sections');
   const [showFiles, setShowFiles] = useState<boolean>(true);
 
   const handleShowFiles = () => {
@@ -20,7 +21,7 @@ export default function Explorer() {
   return (
     <S.Container>
       <S.Title>
-        <Typography variant='h3'>{GeneralText.explorer}</Typography>  
+        <Typography variant='h3'>{t('explorer')}</Typography>  
       </S.Title>
 
       <S.Header onClick={handleShowFiles}>

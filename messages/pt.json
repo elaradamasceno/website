@@ -1,7 +1,18 @@
 {
+  "Folders": {
+    "summary": "Resumo Profissional",
+    "socialNetworks": "Redes Sociais",
+    "gitHub": "GitHub",
+    "resume": "Currículo"
+  },
   "Home": {
-    "viewAllFiles": "View all files",
-    "myExtensions": "My extensions",
-    "myThemes": "My extensions"
+    "viewAllFiles": "Visualizar todos os arquivos",
+    "myExtensions": "Minhas extensões",
+    "myThemes": "Meus temas"
+  },
+  "Sections": {
+    "explorer": "Explorar",
+    "extensions": "Extensões",
+    "colorThemes": "Temas de cores"
   }
 }

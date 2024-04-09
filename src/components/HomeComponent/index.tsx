@@ -8,14 +8,6 @@ import useCustomTranslations from '@/hooks/useCustomTranslations';
 
 import * as S from './styles';
 
-/**
- * 
- * ver arquivos --> explorer
- * extensões --> minhas extensões (criar)
- * meus temas --> icone de tela (criar uma pagina para exibir os temas)
- * git --> 
- */
-
 export default function HomeComponent() {
   const t = useCustomTranslations('Home');
   const { isToShowFiles, showAllFiles } = useFileActions();

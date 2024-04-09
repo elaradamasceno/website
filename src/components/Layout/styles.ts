@@ -4,6 +4,10 @@ interface MainContentProps {
   $showMenu: boolean
 }
 
+interface LengaguesProps {
+  $isActive: boolean
+}
+
 export const Container = styled.div`
   ${({theme}) => css`
     height: 100%;
@@ -45,6 +49,36 @@ export const WrapperHeader = styled.div`
     justify-content: center;
 
     gap: ${theme.pxToRem(10)};
+  `}
+`
+
+export const WrapperLengagues = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    gap: ${theme.pxToRem(4)};
+  `}
+`
+
+export const Lenguages = styled.button<LengaguesProps>`
+  ${({ theme, $isActive }) => css`
+    background: transparent;
+    width: ${theme.pxToRem(48)};
+
+    border: ${theme.border} ${theme.colors.ocean400};
+    border-radius: ${theme.pxToRem(4)};
+
+    color: ${theme.colors.ocean400};
+    font-size: ${theme.pxToRem(10)};
+
+    &:hover{
+      border-color: ${theme.colors.yellow800};
+      color: ${theme.colors.gray100};
+    }
+
+    ${$isActive && `
+      border-color: ${theme.colors.yellow800};
+      color: ${theme.colors.gray100};
+    `}
   `}
 `
 

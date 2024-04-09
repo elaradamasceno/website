@@ -10,16 +10,20 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Explorer, Menu, MenuCircleButton, MenuPage } from '@/components/core';
 import { usePagesMenu } from '@/context/PagesMenu';
 import { GeneralText } from '@/enum/general.enum';
+import { usePathname, useRouter, locales, localePrefix } from '@/navigation';
 
 import * as S from './styles';
 
 interface LayoutComponentProps {
   children: ReactNode
+  locale: string
 }
 
-export default function LayoutComponent({ children }: LayoutComponentProps){
+export default function LayoutComponent({ children, locale }: LayoutComponentProps){
   const theme = useTheme();
   const higherThenSm = useMediaQuery(theme.breakpoints.up('sm'));
+  const pathname = usePathname();
+  const router = useRouter();
 
   const { pagesOpen } = usePagesMenu();
 
@@ -41,6 +45,10 @@ export default function LayoutComponent({ children }: LayoutComponentProps){
     if(!isMobile)
       return <Explorer />   
   }, [isMobile, showPages])
+
+  const handleChangeLocation = async (data: string) => {
+    router.push(pathname, { locale: data});
+  }
 
   const renderMenu = () => {
     return (
@@ -70,6 +78,16 @@ export default function LayoutComponent({ children }: LayoutComponentProps){
               <Typography variant='h6'>{GeneralText.title}</Typography>
             </S.HeaderTextCircle>
           </S.WrapperHeader>
+
+          <S.WrapperLengagues>
+            <S.Lenguages onClick={() => handleChangeLocation('pt')} $isActive={locale === 'pt' ? true : false}>
+              PT-BR
+            </S.Lenguages>
+
+            <S.Lenguages onClick={() => handleChangeLocation('en')} $isActive={locale === 'en' ? true : false}>
+              EN-US
+            </S.Lenguages>
+          </S.WrapperLengagues>
         </S.Header>
 
         <S.Content>

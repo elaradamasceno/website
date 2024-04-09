@@ -29,7 +29,7 @@ export default function LocaleLayout({
         <body className={inter.className}>
           <NextIntlClientProvider messages={messages}>
             <StyledComponentsRegistry>
-              <LayoutComponent>
+              <LayoutComponent locale={locale}>
                 {children}
               </LayoutComponent>
             </StyledComponentsRegistry>
@@ -39,24 +39,3 @@ export default function LocaleLayout({
     </html>
   );
 }
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode,
-//   params: {locale}
-// }) {
-//   return (
-//     <html lang={locale}>
-//       <Providers>
-//         <body className={inter.className}>
-//           <StyledComponentsRegistry>
-//             <LayoutComponent>
-//               {children}
-//             </LayoutComponent>
-//           </StyledComponentsRegistry>
-//         </body>
-//       </Providers>
-//     </html>
-//   )
-// }

@@ -1,5 +1,6 @@
 const theme = {
   colors: {
+    ocean900: '#171c25',
     ocean800: '#1f2430',
     ocean700: '#242936',
     ocean400: '#4e5867',

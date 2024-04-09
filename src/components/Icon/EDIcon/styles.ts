@@ -6,7 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
 
-    color: ${theme.colors.blackOpacity};
+    color: ${theme.colors.ocean900};
 
     h1{
       font-size: ${theme.pxToRem(260)};

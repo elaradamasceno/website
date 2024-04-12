@@ -12,9 +12,8 @@ import { DataPageType, SaveOpenPageProps } from '@/types/actions-page.type';
 import * as S from './styles';
 
 export default function MenuPage() {
-  const { pagesOpen, getOpenPages } = usePagesMenu();
-
   const { onClosePage, onRedirectPage } = useActionsPages();
+  const { pagesOpen, getOpenPages } = usePagesMenu();
 
   const [pages, setPages] = useState<SaveOpenPageProps[]>();
   const [activePage, setActivePage] = useState<SaveOpenPageProps | null>();

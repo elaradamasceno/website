@@ -51,6 +51,8 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
   }, [isMobile, showPages])
 
   const handleChangeLocation = async (data: string) => {
+
+    console.log('data ', data)
     router.push(pathname, { locale: data});
   }
 

@@ -11,10 +11,9 @@ import * as S from './styles';
 export interface FileProps {
   name: string
   typeFile: FilesType
-  redirect: string
 }
 
-export const Files = ({ name, typeFile, redirect }: FileProps) => {
+export const Files = ({ name, typeFile }: FileProps) => {
   const { onRedirectPage } = useActionsPages();
 
   const handleRedirect = () => {

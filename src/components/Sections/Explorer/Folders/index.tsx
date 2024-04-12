@@ -12,25 +12,25 @@ export const Folders = () => {
       <ContentFolder 
         icon={FolderCheck} 
         title={t('summary')} 
-        file={{typeFile: Summary.fileType, redirect: Summary.page, name: Summary.fileType}}
+        file={{typeFile: Summary.fileType, name: Summary.fileType}}
       />
 
       <ContentFolder 
         icon={FolderKanban} 
         title={t('socialNetworks')}  
-        file={{typeFile: SocialMedia.fileType, redirect: SocialMedia.page, name: SocialMedia.fileType}}
+        file={{typeFile: SocialMedia.fileType, name: SocialMedia.fileType}}
       />
 
       <ContentFolder 
         icon={FolderGit2} 
         title={t('gitHub')} 
-        file={{typeFile: GitHub.fileType, redirect: Curriculum.page, name: GitHub.fileType}}
+        file={{typeFile: GitHub.fileType, name: GitHub.fileType}}
       />
 
       <ContentFolder 
         icon={FolderDown} 
         title={t('resume')}  
-        file={{typeFile: Curriculum.fileType, redirect: Curriculum.page, name: Curriculum.fileType}}
+        file={{typeFile: Curriculum.fileType, name: Curriculum.fileType}}
       />
     </>
   )

@@ -108,8 +108,9 @@ export const ButtonClose = styled.button<ActiveProps>`
 
 export const Footer = styled.div`
   ${({ theme }) => css`
+    border-left: ${theme.border};
     background-color: ${theme.colors.ocean700};
-    padding-left: ${theme.pxToRem(4)};
+    padding-left: ${theme.pxToRem(8)};
     padding-bottom: ${theme.pxToRem(8)};
   `}
 `

@@ -4,7 +4,10 @@ import { intervalToDuration } from 'date-fns';
 
 import { FileNumbers, Text, Title } from '@/components/core';
 import useCustomTranslations from '@/hooks/useCustomTranslations';
+
 import { ProfessionalHistoryType, ProfessionalResumeType } from '@/types/summary-api.type';
+import { PageProps } from '@/types/page-type';
+
 import { getDataSummary } from '@/services/summary-api';
 
 import * as S from './styles';
@@ -15,14 +18,14 @@ interface HandleDatesProps {
   isCurrent: boolean
 }
 
-export default function SummaryPage() {
+export default function SummaryPage(pageProps: PageProps) {
   const t = useCustomTranslations('General');
 
   const [professionalResume, setProfessionalResume] = useState<ProfessionalResumeType>()
   const [professionalHistory, setProfessionalHistory] = useState<ProfessionalHistoryType>()
 
   const fetchDataSummary = useCallback(async () => {
-    const data = await getDataSummary();
+    const data = await getDataSummary(pageProps.params.locale);
 
     setProfessionalResume(data.professionalResume);
     setProfessionalHistory(data.professionalHistory);

@@ -39,7 +39,7 @@ export const ContentFolder = ({ title, icon: Icon, file }: ContentFolderProps) =
       </S.Content>
 
       <S.WrapperFiles>
-        {showFiles && <Files typeFile={file.typeFile} redirect={file.redirect} name={title}/>}
+        {showFiles && <Files typeFile={file.typeFile} name={title}/>}
       </S.WrapperFiles>
     </S.Container>
   )

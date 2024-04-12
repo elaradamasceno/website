@@ -1,4 +1,4 @@
-import { useRouter } from '../navigation';
+import { useRouter } from '@/navigation';
 
 import { usePagesMenu } from "@/context/PagesMenu";
 
@@ -58,10 +58,7 @@ const useActionsPages = () => {
   }
 
   const onRedirectPage = ({ typeAction, dataPage}: OnRedirectPageProps) => {
-    console.log('dataPage.name ', dataPage.name)
     const pageRedirect = handleRedirect(dataPage.name);
-
-    console.log('pageRedirect ', pageRedirect)
     router.push(pageRedirect);
 
     if(typeAction === 'save'){
@@ -71,7 +68,6 @@ const useActionsPages = () => {
     }
 
     if(typeAction === 'update'){
-      console.log('dataPage ', dataPage.name)
       updateOpenPage(dataPage.name ?? 'Home')
     }
   }

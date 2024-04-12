@@ -21,4 +21,5 @@ export type DataPageType = {
 export interface OnRedirectPageProps {
   typeAction: TypeActionType
   dataPage: DataPageType
+  redirect?: boolean
 }

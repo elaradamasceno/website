@@ -19,9 +19,10 @@ export default function MenuPage() {
   const [activePage, setActivePage] = useState<SaveOpenPageProps | null>();
 
   useEffect(() => {
-    const getPages = getOpenPages()
+    const getPages = getOpenPages();
+    const verifyEmptyPage = pagesOpen.filter(page => page.typeFile === 'none');
 
-    if(getPages.length > 0){
+    if(getPages.length !== verifyEmptyPage.length ){
       const currPage = getPages.filter(page => page.isActive)
 
       setPages(getPages)

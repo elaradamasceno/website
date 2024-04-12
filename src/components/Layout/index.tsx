@@ -10,8 +10,12 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Explorer, Menu, MenuCircleButton, MenuPage } from '@/components/core';
 import { usePagesMenu } from '@/context/PagesMenu';
 import { GeneralText } from '@/enum/general.enum';
-import { usePathname, useRouter, locales, localePrefix } from '@/navigation';
+import { Curriculum, GitHub, Home, SocialMedia, Summary } from '@/enum/folders.enum';
+import useActionsPages from '@/hooks/useActionsPages';
+import useCustomTranslations from '@/hooks/useCustomTranslations';
+import { usePathname, useRouter } from '@/navigation';
 
+import { DataPageType } from '@/types/actions-page.type';
 import * as S from './styles';
 
 interface LayoutComponentProps {
@@ -19,13 +23,18 @@ interface LayoutComponentProps {
   locale: string
 }
 
+let changeLocale = false
+
 export default function LayoutComponent({ children, locale }: LayoutComponentProps){
   const theme = useTheme();
   const higherThenSm = useMediaQuery(theme.breakpoints.up('sm'));
   const pathname = usePathname();
   const router = useRouter();
-
+  
+  const { onRedirectPage } = useActionsPages();
   const { pagesOpen } = usePagesMenu();
+  
+  const t = useCustomTranslations('Folders');
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const [showPages, setShowPages] = useState<boolean>(false);
@@ -39,8 +48,16 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
   }, [pagesOpen])
 
   useEffect(() => {
-    localStorage.setItem('@locale', locale)
-  }, [locale])
+    if(changeLocale){
+      const dataPage = handleShowMenuPage()
+      
+      onRedirectPage({
+        typeAction: 'save',
+        dataPage: { name: dataPage.name, typeFile: dataPage.typeFile },
+        redirect: false
+      })
+    }
+  }, [locale, changeLocale])
 
   const handleRenderingExplorerRules = useMemo(() => {
     if(isMobile && !showPages)
@@ -50,10 +67,26 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
       return <Explorer />   
   }, [isMobile, showPages])
 
-  const handleChangeLocation = async (data: string) => {
+  const handleShowMenuPage = (): DataPageType => {
+    switch(pathname) {
+      case Summary.page:
+        return {name: t('summary'), typeFile: Summary.fileType}
+      case SocialMedia.page:
+        return {name: t('socialNetworks'), typeFile: SocialMedia.fileType}
+      case GitHub.page:
+        return {name: t('gitHub'), typeFile: GitHub.fileType}
+      case Curriculum.page:
+        return {name: t('resume'), typeFile: Curriculum.fileType}
+      case Home.folderTitle:
+        return {name: Home.page, typeFile: 'none'}
+      default:
+        return {name: '/', typeFile: 'none' }
+    }
+  }
 
-    console.log('data ', data)
-    router.push(pathname, { locale: data});
+  const handleChangeLocation = async (data: string) => {
+    router.replace(pathname, { locale: data});
+    changeLocale = true
   }
 
   const renderMenu = () => {

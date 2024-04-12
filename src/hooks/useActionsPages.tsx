@@ -57,9 +57,9 @@ const useActionsPages = () => {
     }
   }
 
-  const onRedirectPage = ({ typeAction, dataPage}: OnRedirectPageProps) => {
+  const onRedirectPage = ({ typeAction, dataPage, redirect = true}: OnRedirectPageProps) => {
     const pageRedirect = handleRedirect(dataPage.name);
-    router.push(pageRedirect);
+    if(redirect) router.push(pageRedirect);
 
     if(typeAction === 'save'){
       saveOpenPage({

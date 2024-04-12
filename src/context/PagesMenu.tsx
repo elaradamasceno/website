@@ -64,14 +64,6 @@ const PagesMenuProvider = ({ children }: PagesMenuProvider ) => {
     return pagesOpen
   }, [ pagesOpen ])
 
-  useEffect(() => {
-    const verifyEmptyPage = pagesOpen.filter(page => page.typeFile === 'none');
-    if(verifyEmptyPage.length > 0){
-      pagesOpen.shift();
-      setPagesOpen(pagesOpen);
-    }
-  }, [pagesOpen])
-
   return (
     <>
       <PagesMenuContext.Provider

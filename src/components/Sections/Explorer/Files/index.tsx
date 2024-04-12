@@ -1,6 +1,3 @@
-import { useState } from 'react';
-import { Braces, Info } from 'lucide-react';
-
 import { FilesType } from '@/types/files.type';
 
 import useActionsPages from '@/hooks/useActionsPages';

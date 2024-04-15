@@ -7,21 +7,26 @@ import { ArrowBigUp, Code, Command } from 'lucide-react';
 
 import { EDIcon, Text } from '@/components/core';
 import { useFileActions } from '@/context/Files';
+import { useSections } from '@/context/Sections';
+
 import useCustomTranslations from '@/hooks/useCustomTranslations';
 
 import * as S from './styles';
+import { Sections } from '@/enum/sections.enum';
 
 export default function HomeComponent() {
   const t = useCustomTranslations('Home');
   const theme = useTheme();
   const higherThenSm = useMediaQuery(theme.breakpoints.up('sm'));
 
-  const { isToShowFiles, showAllFiles } = useFileActions();
+  const { updateSection } = useSections();
+  const { showAllFiles } = useFileActions();
 
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const handleCommandsToOpenFile = (event: KeyboardEvent) => {
     if (event.shiftKey && event.metaKey && event.key === 'p') {
+      updateSection(Sections.explorer);
       showAllFiles({ show: true });
       event.preventDefault();
     }
@@ -29,16 +34,14 @@ export default function HomeComponent() {
 
   const handleCommandsToOpenExtensions = (event: KeyboardEvent) => {
     if (event.shiftKey && event.metaKey && event.key === 'e') {
-      console.log('Teclas Command + . pressionadas');
-      alert('Teclas Command + . pressionadas - exibir extensões')
+      updateSection(Sections.extensions);
       event.preventDefault();
     }
   }
 
   const handleCommandsToOpenColorThemes = (event: KeyboardEvent) => {
     if (event.metaKey && event.key === 'c') {
-      console.log('Teclas Command + c pressionadas');
-      alert('Teclas Command + c pressionadas - exibir opções de temas ')
+      updateSection(Sections.theme);
       event.preventDefault();
     }
   }
@@ -88,7 +91,7 @@ export default function HomeComponent() {
           <S.CustomIcons> 
             <ArrowBigUp /> 
             <Command />
-            <S.LetterAsIcon> T </S.LetterAsIcon>
+            <S.LetterAsIcon> C </S.LetterAsIcon>
           </S.CustomIcons>
         </S.WrapperCommands>
       </S.Content>

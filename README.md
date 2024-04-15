@@ -2,6 +2,8 @@
 
 ![Website GIF](public/images/project.gif)
 
+https://elaradamasceno.netlify.app/pt
+
 ## About the Project
 
 This is the repository for my personal website, where I recreated the layout of Visual Studio Code to create a familiar experience for developers. The website was developed using Next.js 13, Styled Components, TypeScript, and Next-Intl for internationalization.

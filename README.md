@@ -1,6 +1,6 @@
 # My Personal Website
 
-![Website GIF](/images/project.gif)
+![Website GIF](public/images/project.gif)
 
 ## About the Project
 

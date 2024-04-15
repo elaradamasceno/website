@@ -1,6 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Personal Website
+
+![Website GIF](/project.gif)
+
+## About the Project
+
+This is the repository for my personal website, where I recreated the layout of Visual Studio Code to create a familiar experience for developers. The website was developed using Next.js 13, Styled Components, TypeScript, and Next-Intl for internationalization.
+
+### Technologies Used
+
+- [Next.js](https://nextjs.org/) - React framework for web applications.
+- [Styled Components](https://styled-components.com/) - Library for styling React components.
+- [TypeScript](https://www.typescriptlang.org/) - Typed programming language.
+- [Next-Intl](https://github.com/vriad/next-intl) - Library for internationalization in Next.js applications.
 
 ## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
@@ -17,6 +31,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## How to Contribute
+
+1. Fork this repository.
+2. Create a branch with your feature: `git checkout -b my-feature`.
+3. Commit your changes: `git commit -m 'Adding new feature'`.
+4. Push to your branch: `git push origin my-feature`.
+5. Submit a pull request.
+
 
 ## Learn More
 

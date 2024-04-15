@@ -21,7 +21,7 @@ import { useSections } from '@/context/Sections';
 
 import { GeneralText } from '@/enum/general.enum';
 import { Curriculum, GitHub, Home, SocialMedia, Summary } from '@/enum/folders.enum';
-import { Sessions } from '@/enum/sessions.enum';
+import { Sections } from '@/enum/sections.enum';
 
 import useActionsPages from '@/hooks/useActionsPages';
 import useCustomTranslations from '@/hooks/useCustomTranslations';
@@ -73,11 +73,11 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
 
   const handleDisplayOfSectionTypes = useMemo(() => {
     switch(currentSection){
-      case Sessions.explorer:
+      case Sections.explorer:
         return <Explorer />
-      case Sessions.extensions:
+      case Sections.extensions:
         return <Extensions />
-      case Sessions.theme:
+      case Sections.theme:
         return <Themes />
       default:
         return <Explorer />

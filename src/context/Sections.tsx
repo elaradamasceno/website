@@ -1,6 +1,6 @@
 'use client';
 
-import { Sessions } from '@/enum/sessions.enum';
+import { Sections } from '@/enum/sections.enum';
 import { MenuComponentType } from '@/types/sections.type';
 import { ReactNode, createContext, useContext, useEffect, useState} from 'react';
 
@@ -18,7 +18,7 @@ const SectionsContext = createContext<SectionProps>(
 );
 
 const SectionsProvider = ({ children }: SectionsProvider) => {
-  const [ currentSection, setCurrentSection ] = useState<MenuComponentType>(Sessions.default);
+  const [ currentSection, setCurrentSection ] = useState<MenuComponentType>(Sections.default);
   
   const updateSection = (data: MenuComponentType) => {
     setCurrentSection(data);

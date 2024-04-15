@@ -70,3 +70,11 @@ export const CustomIcons = styled.div`
     };
   `}
 `;
+
+export const Mobile = styled.div`
+  ${({ theme }) => css`
+    color: ${theme.colors.ocean400};
+    font-size: ${theme.pxToRem(12)};
+    text-align: center;
+  `}
+`;

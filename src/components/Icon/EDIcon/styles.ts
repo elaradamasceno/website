@@ -11,6 +11,10 @@ export const Container = styled.div`
     h1{
       font-size: ${theme.pxToRem(260)};
       letter-spacing: -${theme.pxToRem(14)};
+
+      @media only screen and (max-width: 600px){
+        font-size: ${theme.pxToRem(150)};
+      }
     }
   `}
 `;

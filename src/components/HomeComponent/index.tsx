@@ -1,5 +1,8 @@
 'use client'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
+
 import { ArrowBigUp, Code, Command } from 'lucide-react';
 
 import { EDIcon, Text } from '@/components/core';
@@ -10,7 +13,12 @@ import * as S from './styles';
 
 export default function HomeComponent() {
   const t = useCustomTranslations('Home');
+  const theme = useTheme();
+  const higherThenSm = useMediaQuery(theme.breakpoints.up('sm'));
+
   const { isToShowFiles, showAllFiles } = useFileActions();
+
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   const handleCommandsToOpenFile = (event: KeyboardEvent) => {
     if (event.shiftKey && event.metaKey && event.key === 'p') {
@@ -47,10 +55,12 @@ export default function HomeComponent() {
     };
   }, []);
 
-  return (
-    <S.Container>
-      <EDIcon />
+  useEffect(() => {
+    setIsMobile(!higherThenSm)
+  }, [higherThenSm])
 
+  const renderDesktop = () => {
+    return (
       <S.Content>
         <S.WrapperCommands>
           <S.Typography>{t('viewAllFiles')}</S.Typography>  
@@ -82,6 +92,22 @@ export default function HomeComponent() {
           </S.CustomIcons>
         </S.WrapperCommands>
       </S.Content>
+    )
+  }
+
+  const renderMobile = () => {
+    return (
+      <S.Mobile>
+        <S.Typography>{t('message')}</S.Typography>  
+      </S.Mobile>
+    )
+  }
+
+  return (
+    <S.Container>
+      <EDIcon />
+
+      { isMobile ? renderMobile() : renderDesktop() }
     </S.Container>
   )
 }

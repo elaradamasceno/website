@@ -9,14 +9,12 @@ interface LengaguesProps {
 }
 
 export const Container = styled.div`
-  ${({theme}) => css`
-    height: 100%;
+  height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  `}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 `
 
 export const Wrapper = styled.div`
@@ -28,7 +26,6 @@ export const Wrapper = styled.div`
 
     @media only screen and (max-width: 600px){
       width: 100%;
-      // height: 100%
     }
   `}
 `
@@ -100,6 +97,10 @@ export const WrapperIcons = styled.div`
         cursor: pointer;
       }
     }
+
+    @media only screen and (max-width: 600px){
+      display: none;
+    }
   `}
 `
 
@@ -121,6 +122,11 @@ export const HeaderTextCircle = styled.div`
     h6{
       font-size: ${theme.pxToRem(14)};
     }
+
+    @media only screen and (max-width: 600px){
+      width: auto;
+      padding: ${theme.pxToRem(8)};
+    }
   `}
 `
 
@@ -128,6 +134,10 @@ export const Content = styled.div`
   ${({theme}) => css`
     display: flex;
     gap: ${theme.pxToRem(16)};
+
+    @media only screen and (max-width: 600px){
+     gap: 0px;
+    }
   `}
 `
 

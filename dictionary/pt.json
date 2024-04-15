@@ -8,13 +8,15 @@
   "Home": {
     "viewAllFiles": "Visualizar todos os arquivos",
     "myExtensions": "Minhas extensões",
-    "myThemes": "Meus temas"
+    "myThemes": "Meus temas",
+    "message": "Para aproveitar ao máximo todas as funcionalidades, recomendo acessar de um computador desktop."
   },
   "Sections": {
     "explorer": "Explorar",
     "extensions": "Extensões",
     "descriptionsAboutExtensionsSection": "Aqui estão algumas extensões que fazem parte do meu dia a dia e me ajudam a otimizar o fluxo de trabalho",
-    "colorThemes": "Temas de cores"
+    "colorThemes": "Tema de cores",
+    "descriptionAboutColorThemesSection": "Eu gosto de variar os temas com frequência para evitar o cansaço visual. Abaixo, listei alguns dos temas que uso regularmente em minha rotina de desenvolvimento"
   },
   "General": {
     "month": "mês",

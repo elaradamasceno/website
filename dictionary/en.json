@@ -8,13 +8,15 @@
   "Home": {
     "viewAllFiles": "View all files",
     "myExtensions": "My extensions",
-    "myThemes": "My color themes"
+    "myThemes": "My color themes",
+    "message": "To make the most of all the features, I recommend accessing from a desktop computer."
   },
   "Sections": {
     "explorer": "Explorer",
     "extensions": "Extensions",
     "descriptionsAboutExtensionsSection": "Here are some extensions that are part of my daily routine and help me streamline my workflow",
-    "colorThemes": "Color Themes"
+    "colorThemes": "Color Themes",
+    "descriptionAboutColorThemesSection": "I like to change themes frequently to avoid visual fatigue. Below, I've listed some of the themes I regularly use in my development routine"
   },
   "General": {
     "month": "month",

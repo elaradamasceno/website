@@ -22,7 +22,7 @@ export default function Extensions() {
             const info: ExtensionInfo = extensionInfos[extension];
             return (
               <li key={extension}>
-                <a href={info.link}>{info.text}</a>
+                <a href={info.link} target='_blank'>{info.text}</a>
               </li>
             );
           }

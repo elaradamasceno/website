@@ -21,7 +21,7 @@ export default function Explorer() {
   return (
     <S.Container>
       <S.Title>
-        <Typography variant='h3'>{t('explorer')}</Typography>  
+        <Typography variant='h6'>{t('explorer')}</Typography>  
       </S.Title>
 
       <S.Header onClick={handleShowFiles}>

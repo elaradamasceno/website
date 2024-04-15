@@ -13,6 +13,7 @@
   "Sections": {
     "explorer": "Explorer",
     "extensions": "Extensions",
+    "descriptionsAboutExtensionsSection": "Here are some extensions that are part of my daily routine and help me streamline my workflow",
     "colorThemes": "Color Themes"
   },
   "General": {

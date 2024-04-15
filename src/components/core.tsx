@@ -1,5 +1,5 @@
 'use client';
-import { Explorer } from "./Sections";
+import { Explorer, Extensions, Themes } from "./Sections";
 import GithubRepositories from "./GithubRepositories";
 import FileNumbers from "./FileNumbers";
 import HomeComponent from "./HomeComponent";
@@ -12,6 +12,7 @@ import Title from "./Title";
 
 export { 
   Explorer,
+  Extensions,
   EDIcon,
   GithubRepositories,
   FileNumbers,
@@ -24,5 +25,6 @@ export {
   PageIcon,
   SocialMediaLinks,
   Text,
+  Themes,
   Title
 }

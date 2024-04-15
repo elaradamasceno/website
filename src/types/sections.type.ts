@@ -1,0 +1,1 @@
+export type MenuComponentType = 'explorer' | 'extensions' | 'themes' | 'none';

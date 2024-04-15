@@ -13,6 +13,7 @@
   "Sections": {
     "explorer": "Explorar",
     "extensions": "Extensões",
+    "descriptionsAboutExtensionsSection": "Aqui estão algumas extensões que fazem parte do meu dia a dia e me ajudam a otimizar o fluxo de trabalho",
     "colorThemes": "Temas de cores"
   },
   "General": {

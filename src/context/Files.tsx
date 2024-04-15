@@ -13,7 +13,7 @@ interface FilesProps {
 
 interface FilesProviderProps {
   children: ReactNode
-}
+};
 
 const FileContext = createContext<FilesProps>(
   {} as FilesProps

@@ -7,17 +7,28 @@ import Typography from '@mui/material/Typography';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Explorer, Menu, MenuCircleButton, MenuPage } from '@/components/core';
+import { 
+  Explorer,
+  Extensions, 
+  Menu, 
+  MenuCircleButton, 
+  MenuPage,
+  Themes 
+} from '@/components/core';
+
 import { usePagesMenu } from '@/context/PagesMenu';
+import { useSections } from '@/context/Sections';
+
 import { GeneralText } from '@/enum/general.enum';
 import { Curriculum, GitHub, Home, SocialMedia, Summary } from '@/enum/folders.enum';
+import { Sessions } from '@/enum/sessions.enum';
+
 import useActionsPages from '@/hooks/useActionsPages';
 import useCustomTranslations from '@/hooks/useCustomTranslations';
 import { usePathname, useRouter } from '@/navigation';
 
 import { DataPageType } from '@/types/actions-page.type';
 import * as S from './styles';
-
 interface LayoutComponentProps {
   children: ReactNode
   locale: string
@@ -33,6 +44,7 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
   
   const { onRedirectPage } = useActionsPages();
   const { pagesOpen } = usePagesMenu();
+  const { currentSection } = useSections();
   
   const t = useCustomTranslations('Folders');
 
@@ -59,13 +71,26 @@ export default function LayoutComponent({ children, locale }: LayoutComponentPro
     }
   }, [locale, changeLocale])
 
+  const handleDisplayOfSectionTypes = useMemo(() => {
+    switch(currentSection){
+      case Sessions.explorer:
+        return <Explorer />
+      case Sessions.extensions:
+        return <Extensions />
+      case Sessions.theme:
+        return <Themes />
+      default:
+        return <Explorer />
+    }
+  }, [currentSection])
+
   const handleRenderingExplorerRules = useMemo(() => {
     if(isMobile && !showPages)
-      return <Explorer />
+      return handleDisplayOfSectionTypes
     
     if(!isMobile)
-      return <Explorer />   
-  }, [isMobile, showPages])
+      return handleDisplayOfSectionTypes
+  }, [isMobile, showPages, handleDisplayOfSectionTypes ])
 
   const handleShowMenuPage = (): DataPageType => {
     switch(pathname) {

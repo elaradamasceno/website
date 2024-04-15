@@ -33,6 +33,7 @@ const theme = {
     white: '#FFFFFF',
   },
 
+  sectionWidth: '250',
   border: '0.5px solid',
 
   pxToRem(value: number){

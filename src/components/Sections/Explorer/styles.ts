@@ -3,6 +3,7 @@ import { styled, css } from "styled-components";
 export const Container = styled.div`
   ${({theme}) => css`
     padding: ${theme.pxToRem(12)} 0px;
+    width: ${theme.pxToRem(theme.sectionWidth)};;
 
     svg{
       color: ${theme.colors.ocean400};
@@ -14,7 +15,7 @@ export const Title = styled.div`
   ${({theme}) => css`
     padding: ${theme.pxToRem(4)} ${theme.pxToRem(8)} ${theme.pxToRem(10)} ${theme.pxToRem(8)};
     
-    h3{
+    h6{
       font-size: ${theme.pxToRem(12)};
       text-transform: uppercase;
       color: ${theme.colors.ocean400};
